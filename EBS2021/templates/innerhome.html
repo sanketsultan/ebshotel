@@ -1,0 +1,90 @@
+{% include 'header.html' %}
+<div class="contain" style="margin-top: 60px;">
+<center><h4 class="mt-4 ml-3" style="font-size: 22px; color: #404040;">Welcome {{request.user.username}}</h4></center>
+<br></div>
+<div class="container mt-3">
+<div class="row">
+    <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Total Hotels</h4>
+            <h5 style="color : #ea786b">{{totalevents}}</h5>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'view_event' %}" class="text-warning">View Details >></a>
+        </div>
+        </div>
+    </div>
+    {% comment %} <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+                <h4 class="text-light">Total Sponsor</h4>
+                <h5 style="color : #ea786b">{{totalsponsor}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'view_sponsor' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div> {% endcomment %}
+    <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Total Category</h4>
+            <h5 style="color : #ea786b">{{totalcategory}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'view_category' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">New Bookings</h4>
+            <h5 style="color : #ea786b"> {{totalnewbooking}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'booking_request' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Total Confirmed Booking</h4>
+            <h5 style="color : #ea786b"> {{totalconfirmbooking}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'confirmed_booking' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+<div class="col-sm-4 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">All Booking</h4>
+            <h5 style="color : #ea786b"> {{allbooking}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'all_booking' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Total Users</h4>
+            <h5 style="color : #ea786b"> {{totalusers}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'view_user' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+    </div>
